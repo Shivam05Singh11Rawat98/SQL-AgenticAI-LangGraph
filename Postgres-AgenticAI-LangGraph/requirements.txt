@@ -1,0 +1,11 @@
+psycopg2
+psycopg2-binary
+pandas
+python-dotenv
+langchain_community
+pyprojroot
+openai
+google-generativeai
+langchain_google_genai
+langchain_openai
+gradio

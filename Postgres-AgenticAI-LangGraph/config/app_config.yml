@@ -1,0 +1,18 @@
+directories:
+  stored_csv_xlsx_directory: data/csv_xlsx
+  sqldb_connection_uri: "postgresql://${PG_USER}:${PG_PASSWORD}@${PG_HOST}:${PG_PORT}/${PG_DB1}"
+  stored_csv_xlsx_sqldb_connection_uri: postgresql://postgres:your_password@localhost:5432/csv_xlsx
+  persist_directory: data/chroma
+  uploaded_files_sqldb_directory: data/csv_xlsx
+  stored_csv_xlsx_sqldb_directory: data/csv_xlsx
+
+llm_config:
+    agent_llm_system_role: "Given the following user question, corresponding SQL query, and SQL result, answer the user question.\n
+    Question: {question}\n
+    SQL Query: {query}\n
+    SQL Result: {result}\n
+    Answer: 
+    "
+    rag_llm_system_role: "You will recieve the user's question along with the search results of that question over a database. Give the user the proper answer."
+    engine: "gpt-35-turbo"
+    temperature: 0.0
